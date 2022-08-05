@@ -1,4 +1,4 @@
-# CyberTics Challenge
+# CyberTicks Challenge
 
 This project was created with React and Tailwind CSS for styling.
 
