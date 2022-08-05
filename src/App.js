@@ -24,6 +24,7 @@ import ButtonFilter from "./components/Buttons/ButtonFilter";
 function App() {
   const [list, setList] = useState([]);
   const [price, setPrice] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
     setList(getInfo());
@@ -83,6 +84,10 @@ function App() {
 
     if (!e.target.value) setList(getInfo());
   };
+
+  const handelOnChange = (e) => {
+    setIsChecked(e.target.checked);
+  };
   return (
     <AppLayout>
       <div className="flex justify-between w-full">
@@ -138,6 +143,7 @@ function App() {
                 <input
                   className="text-xs font-thin text-blue-500 border-blue-300 rounded-md bg-blue-50"
                   type="checkbox"
+                  checked={isChecked}
                 />
                 <div>
                   <h3 className="text-sm font-normal text-gray-800 font-inter">
@@ -214,6 +220,7 @@ function App() {
               <input
                 className="text-xs font-thin text-blue-500 border-blue-300 rounded-md bg-blue-50"
                 type="checkbox"
+                onChange={handelOnChange}
               />
               <h2 className="text-xs font-normal tracking-wide text-gray-600">
                 Project name

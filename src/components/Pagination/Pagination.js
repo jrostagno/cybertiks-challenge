@@ -8,8 +8,18 @@ const Pagination = ({ pageNumbers, nextPage, prevPage, currentPage }) => {
         Page {currentPage} of {pageNumbers}
       </h2>
       <div className="flex gap-3">
-        <ButtonSecondary onClick={() => prevPage()}>Previous</ButtonSecondary>
-        <ButtonSecondary onClick={() => nextPage()}>Next</ButtonSecondary>
+        <ButtonSecondary
+          className={`${currentPage === 1 ? "hidden" : "block"}`}
+          onClick={() => prevPage()}
+        >
+          Previous
+        </ButtonSecondary>
+        <ButtonSecondary
+          className={`${currentPage === pageNumbers ? "hidden" : "block"}`}
+          onClick={() => nextPage()}
+        >
+          Next
+        </ButtonSecondary>
       </div>
     </div>
   );
