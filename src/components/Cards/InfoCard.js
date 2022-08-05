@@ -5,8 +5,8 @@ import Panel from "../Panel/Panel";
 const InfoCard = ({ title, info }) => {
   return (
     <Panel>
-      <div className="flex justify-between">
-        <h3 className="text-xs font-inter font-normal text-gray-600">
+      <div className="flex justify-between p-1">
+        <h3 className="text-sm font-normal tracking-wide text-gray-500 font-inter">
           {title}
         </h3>
         <svg
@@ -25,10 +25,10 @@ const InfoCard = ({ title, info }) => {
         </svg>
       </div>
 
-      <div className="flex justify-between items-center mt-2">
-        <h1 className="text-black font-semibold text-3xl">{info}</h1>
+      <div className="flex items-center justify-between p-1 mt-2">
+        <h1 className="text-3xl font-semibold text-black">{info}</h1>
         <div>
-          <span className="rounded-xl flex items-center gap-1 px-1 py-1 text-green-800 bg-green-50 text-xs ">
+          <span className="flex items-center gap-1 px-1 py-1 text-xs text-green-800 rounded-xl bg-green-50 ">
             <AiOutlineArrowUp />
             100%
           </span>

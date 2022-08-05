@@ -5,7 +5,7 @@ const Subtitle = ({ children, className, ...props }) => {
     <h2
       className={`${
         className || ""
-      } font-inter font-light text-lg text-gray-500`}
+      } font-inter font-light text-lg tracking-wide text-gray-500`}
       {...props}
     >
       {children}
